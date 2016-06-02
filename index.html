@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <!-- metatag -->
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- jQuery -->
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+      <!-- cocods2d -->
+      <script type="text/javascript" src="plugins/cocos2d/cocos2d-js-v3.11.js" charset="UTF-8"></script>
+
+
+      <!-- greanSock Animation platform -->
+      <script src="plugins/gsap/easing/EasePack.js"></script>
+      <script src="plugins/gsap/plugins/CSSPlugin.js"></script>
+      <script src="plugins/gsap/utils/SplitText.min.js"></script>
+      <script src="plugins/gsap/TimelineLite.js"></script>
+      <script src="plugins/gsap/TweenLite.js"></script>
+
+
+      <!-- Bootstrap -->
+      <link href="scripts/bootstrap/css/bootstrap.css" rel="stylesheet">
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+
+
+      <!-- css -->
+      <link rel="stylesheet" href="styles/base.css"/>
+
+
+      <!-- title -->
+      <title> spine2dViewer </title>
+
+
+    </head>
+
+
+    <body>
+      <div class="content" id="content">
+        <div class="container-fluid" id="spineviewer">
+          <div class="row" id="menu">
+            <div class="col-xs-12 col-sm-5 col-md-5" id="skeletonsloader">
+              <p>Spine2d <em>viewer</em> <button type="button" class="btn btn-primary">Load Skeleton</button></p>
+            </div>
+            <div class="col-xs-9 col-sm-5 col-md-5" id="controls">
+
+                <div class="group">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Play</button>
+                    <button type="button" class="btn btn-primary">Stop</button>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary">0.5x</button>
+                    <button type="button" class="btn btn-primary">1.0x</button>
+                    <button type="button" class="btn btn-primary">1.5x</button>
+                    <button type="button" class="btn btn-primary">2.0x</button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-2" id="exit">
+                <button type="button" class="btn btn-primary">exit</button><!---->
+            </div>
+          </div>
+          <div class="row" id="soft">
+            <div class="col-md-10" id="viewport">
+              <!-- <canvas id="viewport-canvas" width="800" height="600"></canvas> -->
+              <canvas class="viewport-canvas" id="viewport-canvas" width="800" height="600"></canvas>
+              <!-- viewport --><script src="viewport.js"></script>
+
+            </div>
+            <div class="col-md-2" id="library">
+              <div class="animations" id="animations">
+                <img src="icons/animations_logo.png"></img> Animations
+              </div>
+              <div class="animations-list" id="animations-list">
+                <div class="list-group">
+                  <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> run</a>
+                  <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> walk</a>
+                  <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> jump</a>
+                </div>
+              </div>
+              <div class="skins" id="skins">
+                <img src="icons/skins_logo.png"></img> Skins
+              </div>
+              <div class="skins-list" id="skins-list">
+                <div class="list-group">
+                  <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> rambo</a>
+                  <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> batman</a>
+                  <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> ta mère</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="footer">
+            <div class="col-md-12" id="infos">infos</div>
+          </div>
+        </div>
+      </div>
+      <!-- my scripts -->
+      <script src="responsive.js"></script>
+    </body>
+
+</html>

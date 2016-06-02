@@ -1,0 +1,174 @@
+
+robot_gun_walk.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+examples/enemis_robot_auto/back_jambe_droit
+  rotate: false
+  xy: 389, 19
+  size: 38, 47
+  orig: 38, 47
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/back_jambe_gauche
+  rotate: false
+  xy: 577, 20
+  size: 39, 47
+  orig: 39, 47
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/back_mollet_droit
+  rotate: false
+  xy: 530, 20
+  size: 45, 47
+  orig: 45, 47
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/back_mollet_gauche
+  rotate: false
+  xy: 481, 20
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/back_pied_droit
+  rotate: true
+  xy: 692, 46
+  size: 27, 73
+  orig: 27, 73
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/back_pivot_droit
+  rotate: false
+  xy: 2, 2
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/back_pivot_gauche
+  rotate: false
+  xy: 295, 2
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/backt_pied_gauche
+  rotate: true
+  xy: 819, 44
+  size: 28, 72
+  orig: 28, 72
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/bombshell
+  rotate: false
+  xy: 199, 17
+  size: 94, 49
+  orig: 94, 49
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/corps
+  rotate: false
+  xy: 2, 21
+  size: 195, 105
+  orig: 195, 105
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_jambe_droit
+  rotate: true
+  xy: 767, 32
+  size: 41, 50
+  orig: 41, 50
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_jambe_gauche
+  rotate: true
+  xy: 944, 21
+  size: 42, 50
+  orig: 42, 50
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_mollet_droit
+  rotate: false
+  xy: 893, 22
+  size: 49, 50
+  orig: 49, 50
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_mollet_gauche
+  rotate: false
+  xy: 429, 17
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_pied_droit
+  rotate: true
+  xy: 944, 65
+  size: 29, 78
+  orig: 29, 78
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_pied_gauche
+  rotate: true
+  xy: 944, 96
+  size: 30, 78
+  orig: 30, 78
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_pivot_droit
+  rotate: false
+  xy: 315, 2
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/front_pivot_gauche
+  rotate: false
+  xy: 996, 44
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/gatline
+  rotate: false
+  xy: 418, 69
+  size: 148, 57
+  orig: 148, 57
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/phazer
+  rotate: false
+  xy: 568, 69
+  size: 122, 57
+  orig: 122, 57
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/sniper
+  rotate: false
+  xy: 199, 68
+  size: 217, 58
+  orig: 217, 58
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/snipershoot
+  rotate: true
+  xy: 692, 75
+  size: 51, 125
+  orig: 51, 125
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/snipershoot_02
+  rotate: true
+  xy: 819, 74
+  size: 52, 123
+  orig: 52, 123
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/spider_pivot
+  rotate: false
+  xy: 295, 22
+  size: 92, 44
+  orig: 92, 44
+  offset: 0, 0
+  index: -1
