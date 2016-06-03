@@ -17,14 +17,14 @@ function addControls()
 
   /* Controls Actions */
   $('#play').mouseup( function(){
-      anSk.setAnimation(0,'walk',true);
+      anSk.setAnimation(0,currentAnimation,true);
       console.log('play mouseup');
     }
 
 
   )
   $('#stop').mouseup( function(){
-      anSk.setAnimation(0,'walk',false);
+      anSk.setAnimation(0,currentAnimation,false);
       console.log('stop mouseup');
     }
 
@@ -84,21 +84,25 @@ function setAnimationsAndSkinsActions()
     console.log('#anim_',i,$(this));
     $(this).mousedown(function(){
       anSk.setAnimation(0,String(AnimationsList[i]), true);
+      currentAnimation = String(AnimationsList[i]);
+      logIt('set current animation: '+currentAnimation);
     })
   });
 
-  $.each($('.skins-list .list-group a'), function(i){
-    console.log('#skin_',i,$(this));
+  $.each($('.skins-list .list-group a'), function(j){
+    console.log('#skin_',j,$(this));
     $(this).mousedown(function(){
-      console.log(String(SkinsList[i]));
+      console.log(String(SkinsList[j]));
       //MyScene.removeChild(anSk);
       var p = anSk.parent;
       anSk.removeFromParent(false);
-
       //anSk.
-      anSk.setSkin(String(SkinsList[i]));
+      anSk.updateWorldTransform();
+      anSk.setSkin(String(SkinsList[j]));
+      currentSkin = String(SkinsList[j]);
+      logIt('set current skin: '+currentSkin);
       p.addChild(anSk);
-      anSk.update(0);
+      anSk.update(200);
     })
   });
 }
