@@ -45,29 +45,55 @@
       <div class="content" id="content">
         <div class="container-fluid" id="spineviewer">
           <div class="row" id="menu">
-            <div class="col-xs-12 col-sm-5 col-md-5" id="skeletonsloader">
-              <p>Spine2d <em>viewer</em> <button type="button" class="btn btn-primary">Load Skeleton</button></p>
-            </div>
-            <div class="col-xs-9 col-sm-5 col-md-5" id="controls">
+            <div class="col-xs-12 col-sm-3 col-md-3" id="skeletonsloader">
+              <div class="dropdown">
+              Spine2d <em>viewer</em>
+              <!--<button type="button" class="btn btn-primary" id="loader-button">Load Skeleton</button>-->
 
-                <div class="group">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-primary" id="play">Play</button>
-                    <button type="button" class="btn btn-primary" id="stop">Stop</button>
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Load Skeleton
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" id="loader-buttons">
+                  <!-- placeHolder  rewrited in animationloader.js-->
+                  <li><a href="#">Skeleton 01</a></li>
+                  <li><a href="#">Skeleton 02</a></li>
+                  <li><a href="#">Skeleton 03</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-9 col-sm-7 col-md-7" id="controls">
+
+
+                  <div class="group">
+
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary disabled">control</button>
+                      <button type="button" class="btn btn-primary" id="play">Play</button>
+                      <button type="button" class="btn btn-primary" id="stop">Stop</button>
+                    </div>
+
+
+
+
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary disabled">speed</button>
+                      <button type="button" class="btn btn-primary" id="speed-x0-5">0.5x</button>
+                      <button type="button" class="btn btn-primary" id="speed-x1-0">1.0x</button>
+                      <button type="button" class="btn btn-primary" id="speed-x1-5">1.5x</button>
+                      <button type="button" class="btn btn-primary" id="speed-x2-0">2.0x</button>
+                    </div>
+
+
+
+
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary disabled">scale</button>
+                      <button type="button" class="btn btn-primary" id="scale-x0-5">0.5x</button>
+                      <button type="button" class="btn btn-primary" id="scale-x1-0">1.0x</button>
+                      <button type="button" class="btn btn-primary" id="scale-x1-5">1.5x</button>
+                      <button type="button" class="btn btn-primary" id="scale-x2-0">2.0x</button>
+                    </div>
                   </div>
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-primary" id="speed-x0-5">0.5x</button>
-                    <button type="button" class="btn btn-primary" id="speed-x1-0">1.0x</button>
-                    <button type="button" class="btn btn-primary" id="speed-x1-5">1.5x</button>
-                    <button type="button" class="btn btn-primary" id="speed-x2-0">2.0x</button>
-                  </div>
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-primary" id="scale-x0-5">0.5x</button>
-                    <button type="button" class="btn btn-primary" id="scale-x1-0">1.0x</button>
-                    <button type="button" class="btn btn-primary" id="scale-x1-5">1.5x</button>
-                    <button type="button" class="btn btn-primary" id="scale-x2-0">2.0x</button>
-                  </div>
-                </div>
+
             </div>
             <div class="col-xs-3 col-sm-2 col-md-2" id="exit">
                 <button type="button" class="btn btn-primary">exit</button><!---->
@@ -86,6 +112,7 @@
               </div>
               <div class="animations-list" id="animations-list">
                 <div class="list-group">
+                  <!-- placeHolder  rewrited in controls.js-->
                   <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> run</a>
                   <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> walk</a>
                   <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> jump</a>
@@ -96,6 +123,7 @@
               </div>
               <div class="skins-list" id="skins-list">
                 <div class="list-group">
+                  <!-- placeHolder  rewrited in controls.js-->
                   <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> rambo</a>
                   <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> batman</a>
                   <a href="#" class="list-group-item"><img src="icons/dot_grey.png"></img> ta mère</a>
@@ -109,6 +137,7 @@
         </div>
       </div>
       <!-- my scripts -->
+      <script src="animationLoader.js"></script>
       <script src="responsive.js"></script>
       <script src="controls.js"></script>
       <script src="console.js"></script>
