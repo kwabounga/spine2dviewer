@@ -1,16 +1,10 @@
-//$(window).resize = function(){console.log('mother fucker resizing');resetCanvasSize()};
-
+// Event listener onresize Modify Cocos Scene and Viewport div
 window.onresize = function(){console.log(resetCanvasSize());};
 
 function resetCanvasSize()
 {
-  console.log('onResize')
-  //$('#viewport-canvas').width =
-  //$('#viewport-canvas').height =
-  //console.log($('.viewport-canvas'));
-  //console.log('canvas height : ', $('#viewport-canvas').height());
+  //console.log('onResize')
   setElmtParentSize($('#viewport-canvas'),$('#viewport'));
-  //windowsSize($('#viewport-canvas'));
   return false;
 }
 
@@ -27,12 +21,10 @@ function setElmtParentSize(elmt, elmtParent){
   {
     elmt.height(resultH);
     elmt.width(resultW);
-    console.log($('#Cocos2dGameContainer').height());
-    console.log($('#Cocos2dGameContainer').width());
+
     $('#Cocos2dGameContainer').height(resultH);
     $('#Cocos2dGameContainer').width(resultW);
-    console.log($('#Cocos2dGameContainer').height());
-    console.log($('#Cocos2dGameContainer').width());
+
     console.log('reSize ',nVw,'% new canvas height',elmt.height(), 'new canvas width',elmt.width());
 
   }else{
@@ -53,15 +45,11 @@ function windowsSize(elmt, less){
 		heightElmt = document.documentElement.clientHeight;
 		widthElmt = document.documentElement.clientWidth;
   }
- console.log('width', widthElmt);
-  //hauteur = hauteur-200;
+
   var resultH = less?(heightElmt-less):heightElmt;
   var resultW = widthElmt-(16.6*widthElmt/100);
 
   elmt.height(resultH);
   elmt.width(resultW);
-  console.log('new canvas height',elmt.height(), 'new canvas width',elmt.width());
-
-
 
 }
