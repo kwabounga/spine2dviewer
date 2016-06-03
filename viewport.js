@@ -1,12 +1,14 @@
 var dirData = "animations/";
 var test ="icons/center.png";
+
+var currentSkeleton = "raptor";
 //var s_texture = dirData + "boss_01.png";
 //var s_textureJSON = dirData + "boss_01.json";
 //var s_textureATLAS = dirData + "boss_01.atlas";
 
-var s_texture = dirData + "runner.png";
-var s_textureJSON = dirData + "runner.json";
-var s_textureATLAS = dirData + "runner.atlas";
+var s_texture = dirData + currentSkeleton + ".png";
+var s_textureJSON = dirData + currentSkeleton + ".json";
+var s_textureATLAS = dirData + currentSkeleton + ".atlas";
 
 //var s_texture = dirData + "robot_gun_walk.png";
 //var s_textureJSON = dirData + "robot_gun_walk.json";
@@ -21,14 +23,25 @@ var g_mainmenu = [
 var MyScene;
 var anSk;
 var currentAnimation = 'run';
-var currentSkin = 'batman';
+var currentSkin = 'default';
 var currentScale = 1;
 
-window.onload = function(){init();};
+window.onload = function(){initviewPort();};
 
 
-function init()
+function killviewport(newSkeleton)
 {
+	console.log(newSkeleton);
+	s_texture = dirData + currentSkeleton + ".png";
+	s_textureJSON = dirData + currentSkeleton + ".json";
+	s_textureATLAS = dirData + currentSkeleton + ".atlas";
+	currentSkin = 'default';
+	cc.game.end();
+	initviewPort();
+}
+function initviewPort()
+{
+	console.log(s_texture,s_textureATLAS,s_textureJSON);
   cc.game.onStart = function(){
     cc.LoaderScene.preload([test,s_texture, s_textureATLAS, s_textureJSON], function () {handleLoader();},this);
   };
@@ -45,7 +58,7 @@ function handleLoader()
             sprite.setPosition(size.width / 2, size.height / 2);
             sprite.setScale(0.8);
             //sprite.opacity = 150;
-						console.log('>>>>>>>',this);
+						//console.log('>>>>>>>',this);
             this.addChild(sprite, 0);
 
             //var label = cc.LabelTTF.create("Hello World", "Arial", 40);
@@ -81,14 +94,14 @@ function handleLoader()
         			cc.log(trackIndex + " event: " + event.data.name)
         		}*/
             this.addChild(anSk);
-						console.log('anSk.height',anSk.height);
+						//console.log('anSk.height',anSk.height);
 						var goodheight = 650;
 						if (anSk.height>goodheight){
 							var newscale = ((anSk.height-goodheight)/goodheight * 100)/100;
 							currentScale = newscale;
-							console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
+							//console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
 							anSk.scaleX = anSk.scaleY = newscale;
-							console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
+							//console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
 							anSk.updateWorldTransform();
 						}
             //var speed = cc.Speed(anSk, 0.5);
@@ -98,7 +111,7 @@ function handleLoader()
 								if(AnimationsList)
 								{
 									var idRan = Math.round(Math.random()*(AnimationsList.length-1));
-									console.log('random id: ',idRan,' of ',AnimationsList.length,'Animations ');
+									//console.log('random id: ',idRan,' of ',AnimationsList.length,'Animations ');
 								}else{
 									console.log('clic FAIL to get Animation ID: no AnimationsList');
 								}

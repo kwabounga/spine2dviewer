@@ -112,18 +112,19 @@ function buildLibrary(){
 }
 function setAnimationsAndSkinsActions()
 {
-  console.log('hum');
+  console.log('setAnimationsAndSkinsActions');
   $.each($('.animations-list .list-group a'), function(i){
-    console.log('#anim_',i,$(this));
+    //console.log('#anim_',i,$(this));
     $(this).mousedown(function(){
       anSk.setAnimation(0,String(AnimationsList[i]), true);
       currentAnimation = String(AnimationsList[i]);
       logIt('set current animation: '+currentAnimation);
     })
-  });
 
+  });
+  currentAnimation = AnimationsList[0];
   $.each($('.skins-list .list-group a'), function(j){
-    console.log('#skin_',j,$(this));
+    //console.log('#skin_',j,$(this));
     $(this).mousedown(function(){
       console.log(String(SkinsList[j]));
       //MyScene.removeChild(anSk);
@@ -139,30 +140,31 @@ function setAnimationsAndSkinsActions()
       //anSk.update(200);
     })
   });
+  currentSkin  = SkinsList[0];
 }
 function getAnimationsAndSkins(data)
 {
   console.log('construct htmlBloc .. ');
   var newAnHtml = '<div class="list-group">';
   var newSkHtml = '<div class="list-group">';
-  console.log(data);
+  //console.log(data);
   /*Animations*/
   var an = AnimationsList = Object.keys(data.animations);
   for (var i = 0; i < an.length; i++) {
-    console.log('..adding ', an[i]);
+    //console.log('..adding ', an[i]);
     newAnHtml += '<a href="#" class="list-group-item" id="anim_'+i+'"><img src="icons/dot_grey.png"></img> '+ String(an[i]) +'</a>';
   }
   newAnHtml += "</div>";
-  console.log('yo',newAnHtml);
+  console.log('animations-list',newAnHtml);
   $('#animations-list').html(newAnHtml);
 
   /*Skins*/
   var sk = SkinsList = Object.keys(data.skins);
   for (var i = 0; i < sk.length; i++) {
-    console.log('..adding ', sk[i]);
+    //console.log('..adding ', sk[i]);
     newSkHtml += '<a href="#" class="list-group-item" id="skin_'+i+'"><img src="icons/dot_grey.png"></img> '+ String(sk[i]) +'</a>';
   }
   newSkHtml += "</div>";
-  console.log('yo',newSkHtml);
+  console.log('skins-list',newSkHtml);
   $('#skins-list').html(newSkHtml);
 }
