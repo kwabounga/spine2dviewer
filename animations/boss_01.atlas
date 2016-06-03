@@ -1,160 +1,160 @@
 
 boss_01.png
-size: 2048,512
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 examples/Boss_01/back
-  rotate: false
-  xy: 2, 2
-  size: 328, 40
-  orig: 329, 40
+  rotate: true
+  xy: 364, 281
+  size: 165, 20
+  orig: 165, 20
   offset: 0, 0
   index: -1
 examples/Boss_01/canons
   rotate: false
-  xy: 679, 119
-  size: 234, 73
-  orig: 234, 74
+  xy: 386, 409
+  size: 117, 37
+  orig: 117, 37
   offset: 0, 0
   index: -1
 examples/Boss_01/corps
   rotate: false
-  xy: 2, 44
-  size: 530, 461
-  orig: 719, 547
-  offset: 27, 86
+  xy: 2, 236
+  size: 360, 274
+  orig: 360, 274
+  offset: 0, 0
   index: -1
 examples/Boss_01/feet
   rotate: false
-  xy: 534, 88
-  size: 143, 417
-  orig: 143, 418
-  offset: 0, 1
+  xy: 2, 25
+  size: 72, 209
+  orig: 72, 209
+  offset: 0, 0
   index: -1
 examples/Boss_01/gaz
-  rotate: false
-  xy: 534, 5
-  size: 136, 81
-  orig: 136, 82
+  rotate: true
+  xy: 206, 119
+  size: 68, 41
+  orig: 68, 41
   offset: 0, 0
   index: -1
 examples/Boss_01/gun
   rotate: false
-  xy: 679, 292
-  size: 291, 123
-  orig: 292, 124
-  offset: 0, 1
+  xy: 364, 448
+  size: 146, 62
+  orig: 146, 62
+  offset: 0, 0
   index: -1
 examples/Boss_01/head
   rotate: false
-  xy: 679, 417
-  size: 340, 88
-  orig: 341, 89
-  offset: 1, 1
+  xy: 76, 189
+  size: 171, 45
+  orig: 171, 45
+  offset: 0, 0
   index: -1
 examples/Boss_01/leg
   rotate: true
-  xy: 1278, 424
-  size: 81, 195
-  orig: 81, 195
+  xy: 249, 193
+  size: 41, 98
+  orig: 41, 98
   offset: 0, 0
   index: -1
 examples/Boss_01/legup
   rotate: true
-  xy: 1838, 425
-  size: 80, 177
-  orig: 80, 177
+  xy: 386, 322
+  size: 40, 89
+  orig: 40, 89
   offset: 0, 0
   index: -1
 examples/Boss_01/missiles
   rotate: false
-  xy: 1021, 418
-  size: 255, 87
-  orig: 255, 109
-  offset: 0, 22
+  xy: 76, 132
+  size: 128, 55
+  orig: 128, 55
+  offset: 0, 0
   index: -1
 examples/Boss_01/missilesdoor
-  rotate: true
-  xy: 972, 275
-  size: 140, 95
-  orig: 140, 95
+  rotate: false
+  xy: 249, 143
+  size: 70, 48
+  orig: 70, 48
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque
-  rotate: false
-  xy: 679, 194
-  size: 255, 96
-  orig: 255, 96
+  rotate: true
+  xy: 76, 2
+  size: 128, 48
+  orig: 128, 48
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque_01
-  rotate: false
-  xy: 1069, 225
-  size: 119, 93
-  orig: 119, 93
+  rotate: true
+  xy: 463, 260
+  size: 60, 47
+  orig: 60, 47
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque_02
   rotate: false
-  xy: 1450, 326
-  size: 149, 90
-  orig: 149, 91
-  offset: 0, 1
+  xy: 386, 274
+  size: 75, 46
+  orig: 75, 46
+  offset: 0, 0
   index: -1
 examples/Boss_01/plaque_03
   rotate: false
-  xy: 1659, 420
-  size: 177, 85
-  orig: 177, 86
-  offset: 0, 1
+  xy: 386, 364
+  size: 89, 43
+  orig: 89, 43
+  offset: 0, 0
   index: -1
 examples/Boss_01/plaque_04
   rotate: true
-  xy: 1601, 321
-  size: 95, 88
-  orig: 95, 88
+  xy: 321, 143
+  size: 48, 44
+  orig: 48, 44
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque_05
-  rotate: false
-  xy: 857, 54
-  size: 41, 63
-  orig: 41, 64
-  offset: 0, 1
+  rotate: true
+  xy: 2, 2
+  size: 21, 32
+  orig: 21, 32
+  offset: 0, 0
   index: -1
 examples/Boss_01/plaque_06
-  rotate: false
-  xy: 1069, 320
-  size: 132, 96
-  orig: 133, 96
+  rotate: true
+  xy: 202, 50
+  size: 67, 48
+  orig: 67, 48
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque_07
-  rotate: false
-  xy: 1475, 418
-  size: 182, 87
-  orig: 182, 87
+  rotate: true
+  xy: 126, 39
+  size: 91, 44
+  orig: 91, 44
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque_08
   rotate: false
-  xy: 936, 182
-  size: 131, 91
-  orig: 132, 91
-  offset: 1, 0
+  xy: 216, 2
+  size: 66, 46
+  orig: 66, 46
+  offset: 0, 0
   index: -1
 examples/Boss_01/plaque_09
   rotate: false
-  xy: 679, 48
-  size: 176, 69
-  orig: 176, 70
+  xy: 126, 2
+  size: 88, 35
+  orig: 88, 35
   offset: 0, 0
   index: -1
 examples/Boss_01/plaque_10
-  rotate: false
-  xy: 1278, 367
-  size: 170, 55
-  orig: 171, 55
+  rotate: true
+  xy: 172, 44
+  size: 86, 28
+  orig: 86, 28
   offset: 0, 0
   index: -1
