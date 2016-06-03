@@ -22,6 +22,7 @@ var MyScene;
 var anSk;
 var currentAnimation = 'run';
 var currentSkin = 'batman';
+var currentScale = 1;
 
 window.onload = function(){init();};
 
@@ -84,6 +85,7 @@ function handleLoader()
 						var goodheight = 650;
 						if (anSk.height>goodheight){
 							var newscale = ((anSk.height-goodheight)/goodheight * 100)/100;
+							currentScale = newscale;
 							console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
 							anSk.scaleX = anSk.scaleY = newscale;
 							console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
@@ -111,6 +113,7 @@ function handleLoader()
             		//anSk.addAnimation(0, "walk", true, 3); //reprend la marche apres 3loops
               }
             },this);
+						resetCanvasSize();
             addControls();
           }
     });
