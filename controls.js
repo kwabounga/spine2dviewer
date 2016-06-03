@@ -30,30 +30,63 @@ function addControls()
 
 
   )
-  $('#x0-5').mouseup( function(){
+  $('#speed-x0-5').mouseup( function(){
       anSk.setTimeScale(0.5);
       console.log('set speed to 0.5');
     }
 
 
   )
-  $('#x1-0').mouseup( function(){
+  $('#speed-x1-0').mouseup( function(){
       anSk.setTimeScale(1);
       console.log('set speed to 1.0');
     }
 
 
   )
-  $('#x1-5').mouseup( function(){
+  $('#speed-x1-5').mouseup( function(){
       anSk.setTimeScale(1.5);
       console.log('set speed to 1.5');
     }
 
 
   )
-  $('#x2-0').mouseup( function(){
+  $('#speed-x2-0').mouseup( function(){
       anSk.setTimeScale(2);
       console.log('set speed to 2.0');
+    }
+
+
+  )
+
+  $('#scale-x0-5').mouseup( function(){
+
+      anSk.scale = currentScale*0.5;
+      console.log('multiply scale x0.5');
+    }
+
+
+  )
+  $('#scale-x1-0').mouseup( function(){
+
+      anSk.scale = currentScale;
+      console.log('multiply scale x1.0');
+    }
+
+
+  )
+  $('#scale-x1-5').mouseup( function(){
+
+      anSk.scale = currentScale*1.5;
+      console.log('multiply scale x0.5');
+    }
+
+
+  )
+  $('#scale-x2-0').mouseup( function(){
+
+      anSk.scale = currentScale*2;
+      console.log('multiply scale x2.0');
     }
 
 
@@ -94,15 +127,16 @@ function setAnimationsAndSkinsActions()
     $(this).mousedown(function(){
       console.log(String(SkinsList[j]));
       //MyScene.removeChild(anSk);
-      var p = anSk.parent;
-      anSk.removeFromParent(false);
+      //var p = anSk.parent;
+      //anSk.removeFromParent(false);
       //anSk.
       anSk.updateWorldTransform();
       anSk.setSkin(String(SkinsList[j]));
+      anSk.setSlotsToSetupPose();
       currentSkin = String(SkinsList[j]);
       logIt('set current skin: '+currentSkin);
-      p.addChild(anSk);
-      anSk.update(200);
+      //p.addChild(anSk);
+      //anSk.update(200);
     })
   });
 }
@@ -126,7 +160,7 @@ function getAnimationsAndSkins(data)
   var sk = SkinsList = Object.keys(data.skins);
   for (var i = 0; i < sk.length; i++) {
     console.log('..adding ', sk[i]);
-    newSkHtml += '<a href="#" class="list-group-item" id="skin_'+i+'><img src="icons/dot_grey.png"></img> '+ String(sk[i]) +'</a>';
+    newSkHtml += '<a href="#" class="list-group-item" id="skin_'+i+'"><img src="icons/dot_grey.png"></img> '+ String(sk[i]) +'</a>';
   }
   newSkHtml += "</div>";
   console.log('yo',newSkHtml);

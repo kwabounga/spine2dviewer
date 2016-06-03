@@ -51,7 +51,7 @@ function windowsSize(elmt, less){
   //hauteur = hauteur-200;
   var resultH = less?(heightElmt-less):heightElmt;
   var resultW = widthElmt-(16.6*widthElmt/100);
-  
+
   elmt.height(resultH);
   elmt.width(resultW);
   console.log('new canvas height',elmt.height(), 'new canvas width',elmt.width());
