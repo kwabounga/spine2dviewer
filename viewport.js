@@ -49,7 +49,7 @@ function handleLoader()
             //label.setPosition(size.width / 2, size.height / 2);
             //this.addChild(label, 1);
 
-            anSk = new sp.SkeletonAnimation(s_textureJSON,s_textureATLAS,0.4);
+            anSk = new sp.SkeletonAnimation(s_textureJSON,s_textureATLAS,1);
             anSk.setPosition(size.width / 2, 0 );
             anSk.updateWorldTransform();
 
