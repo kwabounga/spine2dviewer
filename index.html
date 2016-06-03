@@ -60,39 +60,31 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xs-9 col-sm-7 col-md-7" id="controls">
+            <div class="col-xs-12 col-sm-12 col-md-7" id="controls">
 
+                <div class="group">
 
-                  <div class="group">
-
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-primary disabled">control</button>
-                      <button type="button" class="btn btn-primary" id="play">Play</button>
-                      <button type="button" class="btn btn-primary" id="stop">Stop</button>
-                    </div>
-
-
-
-
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-primary disabled">speed</button>
-                      <button type="button" class="btn btn-primary" id="speed-x0-5">0.5x</button>
-                      <button type="button" class="btn btn-primary" id="speed-x1-0">1.0x</button>
-                      <button type="button" class="btn btn-primary" id="speed-x1-5">1.5x</button>
-                      <button type="button" class="btn btn-primary" id="speed-x2-0">2.0x</button>
-                    </div>
-
-
-
-
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-primary disabled">scale</button>
-                      <button type="button" class="btn btn-primary" id="scale-x0-5">0.5x</button>
-                      <button type="button" class="btn btn-primary" id="scale-x1-0">1.0x</button>
-                      <button type="button" class="btn btn-primary" id="scale-x1-5">1.5x</button>
-                      <button type="button" class="btn btn-primary" id="scale-x2-0">2.0x</button>
-                    </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary disabled">control</button>
+                    <button type="button" class="btn btn-primary" id="play">Play</button>
+                    <button type="button" class="btn btn-primary" id="stop">Stop</button>
                   </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary disabled">speed</button>
+                    <button type="button" class="btn btn-primary" id="speed-x0-5">0.5x</button>
+                    <button type="button" class="btn btn-primary" id="speed-x1-0">1.0x</button>
+                    <button type="button" class="btn btn-primary" id="speed-x1-5">1.5x</button>
+                    <button type="button" class="btn btn-primary" id="speed-x2-0">2.0x</button>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary disabled">scale</button>
+                    <button type="button" class="btn btn-primary" id="scale-x0-5">0.5x</button>
+                    <button type="button" class="btn btn-primary" id="scale-x1-0">1.0x</button>
+                    <button type="button" class="btn btn-primary" id="scale-x1-5">1.5x</button>
+                    <button type="button" class="btn btn-primary" id="scale-x2-0">2.0x</button>
+                  </div>
+
+                </div>
 
             </div>
             <div class="col-xs-1 col-sm-1 col-md-2" id="exit">
@@ -101,9 +93,9 @@
           </div>
           <div class="row" id="soft">
             <div class="col-md-10" id="viewport">
-              <!-- <canvas id="viewport-canvas" width="800" height="600"></canvas> -->
+              <!-- viewport -->
               <canvas class="viewport-canvas" id="viewport-canvas" width="800" height="600"></canvas>
-              <!-- viewport --><script src="viewport.js"></script>
+              <script src="viewport.js"></script>
               <div class="viewport-log" id="viewport-log">"> console"</div>
             </div>
             <div class="col-md-2" id="library">

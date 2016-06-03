@@ -11,11 +11,8 @@ body
 /** interface **/
 #spineviewer
 {
-  /*display: block;*/
   margin: 10px;
   padding: 10px;
-  /*border: 10px;
-  outline: 100px*/
   background-color: #252525;
 }
 #menu
@@ -24,7 +21,6 @@ body
 }
 #soft
 {
-/*  margin: 10px;*/
   padding: 5px;
 }
 #footer
@@ -41,20 +37,23 @@ body
 
 #controls
 {
-  text-align: left;
-  font-size: 10px;
+  text-align: center;
+  font-size: 8px;
 }
-/*@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 992px) {
   #controls
   {
     text-align: left;
+    font-size: 10px;
   }
-}*/
+}
 
 #exit
 {
   text-align: right;
 }
+
+
 /** elements  sofl**/
 
 #viewport
@@ -62,6 +61,7 @@ body
   padding: 10px;
   background-image:  url("../icons/45px_damier.png");
   /*opacity: 0.5;*/
+  background-size: 1.5%;
   background-repeat: repeat;
   background-origin: padding-box;
 }

@@ -1,34 +1,28 @@
-var dirData = "animations/";
-var test ="icons/center.png";
-
+/** infos skeleton **/
 var currentSkeleton = "runner";
-//var s_texture = dirData + "boss_01.png";
-//var s_textureJSON = dirData + "boss_01.json";
-//var s_textureATLAS = dirData + "boss_01.atlas";
+var currentAnimation = 'run';
+var currentSkin = 'default';
+var currentScale = 1;
+
+/** variables for loading skeletons **/
+var dirData = "animations/";
 
 var s_texture = dirData + currentSkeleton + ".png";
 var s_textureJSON = dirData + currentSkeleton + ".json";
 var s_textureATLAS = dirData + currentSkeleton + ".atlas";
 
-//var s_texture = dirData + "robot_gun_walk.png";
-//var s_textureJSON = dirData + "robot_gun_walk.json";
-//var s_textureATLAS = dirData + "robot_gun_walk.atlas";
-
-var g_mainmenu = [
-	{type:"IMAGE", src:s_texture},
-	{type:"XML", src:s_textureJSON},
-	{type:"TEXT", src:s_textureATLAS},
-];
-
+/** cocos2d scene **/
 var MyScene;
+
+/** spine Skeleton Animation **/
 var anSk;
-var currentAnimation = 'run';
-var currentSkin = 'default';
-var currentScale = 1;
+
+
+
 
 window.onload = function(){initviewPort();};
 
-
+/** Kill viewer, reinit skeleton infos, restart viewport **/
 function killviewport(newSkeleton)
 {
 	console.log(newSkeleton);
@@ -40,49 +34,44 @@ function killviewport(newSkeleton)
 	cc.game.end();
 	initviewPort();
 }
+/** init viewport and start animation**/
 function initviewPort()
 {
+	//build library and set currentSkeleton
 	buildLibrary();
 	console.log(s_texture,s_textureATLAS,s_textureJSON);
+	//add handler on Start Event
   cc.game.onStart = function(){
-    cc.LoaderScene.preload([test,s_texture, s_textureATLAS, s_textureJSON], function () {handleLoader();},this);
+		//load texture, atlas, and json animation informations and add handler on success
+    cc.LoaderScene.preload([s_texture, s_textureATLAS, s_textureJSON], function () {handleLoader();},this);
+		//show or not Statistics / fps etc...
+		cc.director.setDisplayStats(false);
   };
+	//start rendering viewport
   cc.game.run("viewport-canvas");
 };
-
+/**cc.LoaderScene preload handler**/
 function handleLoader()
 {
-
+	//init Cocos2d Scene
     MyScene = cc.Scene.extend({
-        onEnter:function () {
+				onEnter:function () {
+						// must execute onEnter.super()
             this._super();
+						// get windows size
             var size = cc.director.getWinSize();
-            var sprite = cc.Sprite.create(test);
-            sprite.setPosition(size.width / 2, size.height / 2);
-            sprite.setScale(0.8);
-            //sprite.opacity = 150;
-						//console.log('>>>>>>>',this);
-            this.addChild(sprite, 0);
-
-            //var label = cc.LabelTTF.create("Hello World", "Arial", 40);
-            //label.setPosition(size.width / 2, size.height / 2);
-            //this.addChild(label, 1);
-
-            anSk = new sp.SkeletonAnimation(s_textureJSON,s_textureATLAS,1);
+						//create AnimationSkeleton (anSk)
+						anSk = new sp.SkeletonAnimation(s_textureJSON,s_textureATLAS,1);
+						//place anSk
             anSk.setPosition(size.width / 2, 0 );
+						//validate tranformation
             anSk.updateWorldTransform();
 
-            //anSk.setSkin("bombshell");
+            //set current Skin
             anSk.setSkin(currentSkin);
-
-            //anSk.setMix("walk","shoot",0.5);
-            //anSk.setMix("shoot","walk",0.5);
-            //anSk.setMix("shoot","stand",0.5);
-            //anSk.setMix("stand","walk",0.5);
-            //anSk.setMix("walk","stand",0.5);
-            //anSk.setMix("stand","walk",0.5);
+						//Set Listeners states Animation Timeline Events
             anSk.setAnimationListener(this, this.animationStateEvent);
-
+						//Set the current animation
             anSk.setAnimation(0,currentAnimation, true);
 
             //anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
@@ -91,50 +80,72 @@ function handleLoader()
             //anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
             //anSk.addAnimation(0,"stand",true,2);
 
+						//Define Time Speed Animation
             anSk.setTimeScale(1.5);
 
+						//Listening states Animation Timeline Events
             /*anSk.state.onEvent = function (trackIndex, event) {
         			cc.log(trackIndex + " event: " + event.data.name)
         		}*/
+
+						//Add Animation Skeleton on cocos2d "MyScene"
             this.addChild(anSk);
-						//console.log('anSk.height',anSk.height);
+						// Set Skeleton Animation Size
 						var goodheight = 650;
 						if (anSk.height>goodheight){
 							var newscale = ((anSk.height-goodheight)/goodheight * 100)/100;
 							currentScale = newscale;
-							//console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
 							anSk.scaleX = anSk.scaleY = newscale;
-							//console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
 							anSk.updateWorldTransform();
 						}
-            //var speed = cc.Speed(anSk, 0.5);
+
+						//Mouse Events Listener
             cc.eventManager.addListener({
               event: cc.EventListener.MOUSE,
-              onMouseDown: function(event) {
-								if(AnimationsList)
-								{
-									var idRan = Math.round(Math.random()*(AnimationsList.length-1));
-									//console.log('random id: ',idRan,' of ',AnimationsList.length,'Animations ');
-								}else{
-									console.log('clic FAIL to get Animation ID: no AnimationsList');
-								}
-
-
-								anSk.setMix(String(AnimationsList[idRan]), currentAnimation, 1);
-								anSk.setMix(currentAnimation, String(AnimationsList[idRan]), 1);
-
-            		anSk.setAnimation(0, String(AnimationsList[idRan]), true); //ce met a faire l'action directement
-								anSk.addAnimation(0, currentAnimation, true, 2); //reprend la marche apres 3loops
-            		//anSk.setAnimation(0, "shoot", true); //ce met a faire l'action directement
-            		//anSk.addAnimation(0, "walk", true, 3); //reprend la marche apres 3loops
-              }
-            },this);
-
+              onMouseDown: function(event){
+								launchRandomAnimation(event);
+							}
+            }, this);
+						/*cc.eventManager.addListener({
+							event: cc.EventListener.TOUCH_ONE_BY_ONE,
+							onTouch: function(event) {
+								logIt('touch');
+								console.log('touch' , event);
+							}
+            },this);*/
+						//Touch Event Listener
+						cc.eventManager.addListener({
+	            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+	            onTouchBegan : function(event){
+								launchRandomAnimation(event);
+							}
+        		}, this);
+						//change canvas size
 						resetCanvasSize();
+						//add controls interface
             addControls();
 
           }
     });
+	//Run Cocos Scene
   cc.director.runScene(new MyScene());
 
+}
+
+// choose and Random animation, mix with current one, and launch it
+function launchRandomAnimation(event)
+{
+	if(AnimationsList)
+	{
+		var idRan = Math.round(Math.random()*(AnimationsList.length-1));
+	}else{
+		console.log('clic FAIL to get Animation ID: no AnimationsList');
+	}
+
+
+	anSk.setMix(String(AnimationsList[idRan]), currentAnimation, 1);
+	anSk.setMix(currentAnimation, String(AnimationsList[idRan]), 1);
+
+	anSk.setAnimation(0, String(AnimationsList[idRan]), true); //ce met a faire l'action directement
+	anSk.addAnimation(0, currentAnimation, true, 2); //reprend la marche apres 3loops
 }

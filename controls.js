@@ -1,59 +1,52 @@
-/*$(function(){
-  console.log('doc ready');
-  //addControls();
-
-
-});
-*/
 var AnimationsList;
 var SkinsList;
+
 function addControls()
 {
-  //MyScene
-  //anSk
-  /* Loader Action */
+
+
 
 
 
   /* Controls Actions */
   $('#play').mouseup( function(){
       anSk.setAnimation(0,currentAnimation,true);
-      console.log('play mouseup');
+      logIt('play');
     }
 
 
   )
   $('#stop').mouseup( function(){
       anSk.setAnimation(0,currentAnimation,false);
-      console.log('stop mouseup');
+      logIt('stop');
     }
 
 
   )
   $('#speed-x0-5').mouseup( function(){
       anSk.setTimeScale(0.5);
-      console.log('set speed to 0.5');
+      logIt('set speed to 0.5');
     }
 
 
   )
   $('#speed-x1-0').mouseup( function(){
       anSk.setTimeScale(1);
-      console.log('set speed to 1.0');
+      logIt('set speed to 1.0');
     }
 
 
   )
   $('#speed-x1-5').mouseup( function(){
       anSk.setTimeScale(1.5);
-      console.log('set speed to 1.5');
+      logIt('set speed to 1.5');
     }
 
 
   )
   $('#speed-x2-0').mouseup( function(){
       anSk.setTimeScale(2);
-      console.log('set speed to 2.0');
+      logIt('set speed to 2.0');
     }
 
 
@@ -62,7 +55,7 @@ function addControls()
   $('#scale-x0-5').mouseup( function(){
 
       anSk.scale = currentScale*0.5;
-      console.log('multiply scale x0.5');
+      logIt('multiply scale x0.5');
     }
 
 
@@ -70,7 +63,7 @@ function addControls()
   $('#scale-x1-0').mouseup( function(){
 
       anSk.scale = currentScale;
-      console.log('multiply scale x1.0');
+      logIt('multiply scale x1.0');
     }
 
 
@@ -78,7 +71,7 @@ function addControls()
   $('#scale-x1-5').mouseup( function(){
 
       anSk.scale = currentScale*1.5;
-      console.log('multiply scale x0.5');
+      logIt('multiply scale x0.5');
     }
 
 
@@ -86,7 +79,7 @@ function addControls()
   $('#scale-x2-0').mouseup( function(){
 
       anSk.scale = currentScale*2;
-      console.log('multiply scale x2.0');
+      logIt('multiply scale x2.0');
     }
 
 
@@ -94,7 +87,7 @@ function addControls()
 
   $('#x2-0').mouseup( function(){
       anSk.setTimeScale(2);
-      console.log('set speed to 2.0');
+      logIt('set speed to 2.0');
     }
   )
   /* library Actions */
@@ -107,14 +100,13 @@ function buildLibrary(){
     setAnimationsAndSkinsActions();
 
   })
-
-
 }
+
 function setAnimationsAndSkinsActions()
 {
-  console.log('setAnimationsAndSkinsActions');
+  logIt('setAnimationsAndSkinsActions');
   $.each($('.animations-list .list-group a'), function(i){
-    //console.log('#anim_',i,$(this));
+
     $(this).mousedown(function(){
       anSk.setAnimation(0,String(AnimationsList[i]), true);
       currentAnimation = String(AnimationsList[i]);
@@ -124,22 +116,21 @@ function setAnimationsAndSkinsActions()
   });
   currentAnimation = AnimationsList[0];
   $.each($('.skins-list .list-group a'), function(j){
-    //console.log('#skin_',j,$(this));
+
     $(this).mousedown(function(){
-      console.log(String(SkinsList[j]));
-      //MyScene.removeChild(anSk);
-      //var p = anSk.parent;
-      //anSk.removeFromParent(false);
-      //anSk.
+
+      logIt(String(SkinsList[j]));
+
       anSk.updateWorldTransform();
       anSk.setSkin(String(SkinsList[j]));
       anSk.setSlotsToSetupPose();
       currentSkin = String(SkinsList[j]);
       logIt('set current skin: '+currentSkin);
-      //p.addChild(anSk);
-      //anSk.update(200);
+
     })
+
   });
+
   console.log(SkinsList.length , 'SkinsList.length ');
   if(SkinsList.length > 1){
     currentSkin  = SkinsList[1];
@@ -147,26 +138,28 @@ function setAnimationsAndSkinsActions()
     currentSkin  = SkinsList[0];
   }
 }
+
 function getAnimationsAndSkins(data)
 {
   console.log('construct htmlBloc .. ');
   var newAnHtml = '<div class="list-group">';
   var newSkHtml = '<div class="list-group">';
-  //console.log(data);
+
   /*Animations*/
   var an = AnimationsList = Object.keys(data.animations);
   for (var i = 0; i < an.length; i++) {
-    //console.log('..adding ', an[i]);
+
     newAnHtml += '<a href="#" class="list-group-item" id="anim_'+i+'"><img src="icons/dot_grey.png"></img> '+ String(an[i]) +'</a>';
   }
   newAnHtml += "</div>";
   console.log('animations-list',newAnHtml);
   $('#animations-list').html(newAnHtml);
 
+
   /*Skins*/
   var sk = SkinsList = Object.keys(data.skins);
   for (var i = 0; i < sk.length; i++) {
-    //console.log('..adding ', sk[i]);
+
     newSkHtml += '<a href="#" class="list-group-item" id="skin_'+i+'"><img src="icons/dot_grey.png"></img> '+ String(sk[i]) +'</a>';
   }
   newSkHtml += "</div>";
