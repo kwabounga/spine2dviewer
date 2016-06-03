@@ -91,13 +91,13 @@ function addControls()
 
 
   )
-  /* library Actions */
-  buildLibrary();
+
   $('#x2-0').mouseup( function(){
       anSk.setTimeScale(2);
       console.log('set speed to 2.0');
     }
   )
+  /* library Actions */
 
 }
 function buildLibrary(){
@@ -140,7 +140,12 @@ function setAnimationsAndSkinsActions()
       //anSk.update(200);
     })
   });
-  currentSkin  = SkinsList[0];
+  console.log(SkinsList.length , 'SkinsList.length ');
+  if(SkinsList.length > 1){
+    currentSkin  = SkinsList[1];
+  }else{
+    currentSkin  = SkinsList[0];
+  }
 }
 function getAnimationsAndSkins(data)
 {

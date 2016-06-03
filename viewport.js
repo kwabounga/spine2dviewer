@@ -42,6 +42,7 @@ function killviewport(newSkeleton)
 }
 function initviewPort()
 {
+	buildLibrary();
 	console.log(s_texture,s_textureATLAS,s_textureJSON);
   cc.game.onStart = function(){
     cc.LoaderScene.preload([test,s_texture, s_textureATLAS, s_textureJSON], function () {handleLoader();},this);
@@ -51,6 +52,7 @@ function initviewPort()
 
 function handleLoader()
 {
+
     MyScene = cc.Scene.extend({
         onEnter:function () {
             this._super();
@@ -127,8 +129,10 @@ function handleLoader()
             		//anSk.addAnimation(0, "walk", true, 3); //reprend la marche apres 3loops
               }
             },this);
+
 						resetCanvasSize();
             addControls();
+
           }
     });
   cc.director.runScene(new MyScene());
