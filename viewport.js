@@ -4,13 +4,13 @@ var test ="icons/center.png";
 //var s_textureJSON = dirData + "boss_01.json";
 //var s_textureATLAS = dirData + "boss_01.atlas";
 
-//var s_texture = dirData + "runner.png";
-//var s_textureJSON = dirData + "runner.json";
-//var s_textureATLAS = dirData + "runner.atlas";
+var s_texture = dirData + "runner.png";
+var s_textureJSON = dirData + "runner.json";
+var s_textureATLAS = dirData + "runner.atlas";
 
-var s_texture = dirData + "robot_gun_walk.png";
-var s_textureJSON = dirData + "robot_gun_walk.json";
-var s_textureATLAS = dirData + "robot_gun_walk.atlas";
+//var s_texture = dirData + "robot_gun_walk.png";
+//var s_textureJSON = dirData + "robot_gun_walk.json";
+//var s_textureATLAS = dirData + "robot_gun_walk.atlas";
 
 var g_mainmenu = [
 	{type:"IMAGE", src:s_texture},
@@ -20,6 +20,8 @@ var g_mainmenu = [
 
 var MyScene;
 var anSk;
+var currentAnimation = 'run';
+var currentSkin = 'batman';
 
 window.onload = function(){init();};
 
@@ -53,8 +55,8 @@ function handleLoader()
             anSk.setPosition(size.width / 2, 0 );
             anSk.updateWorldTransform();
 
-            anSk.setSkin("bombshell");
-            //anSk.setSkin("batman");
+            //anSk.setSkin("bombshell");
+            anSk.setSkin(currentSkin);
 
             //anSk.setMix("walk","shoot",0.5);
             //anSk.setMix("shoot","walk",0.5);
@@ -64,13 +66,13 @@ function handleLoader()
             //anSk.setMix("stand","walk",0.5);
             anSk.setAnimationListener(this, this.animationStateEvent);
 
-            //anSk.setAnimation(0,"run", true);
+            anSk.setAnimation(0,currentAnimation, true);
 
-            anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
-            anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
-            anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
-            anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
-            anSk.addAnimation(0,"stand",true,2);
+            //anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
+            //anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
+            //anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
+            //anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
+            //anSk.addAnimation(0,"stand",true,2);
 
             anSk.setTimeScale(1.5);
 
@@ -78,14 +80,35 @@ function handleLoader()
         			cc.log(trackIndex + " event: " + event.data.name)
         		}*/
             this.addChild(anSk);
+						console.log('anSk.height',anSk.height);
+						var goodheight = 650;
+						if (anSk.height>goodheight){
+							var newscale = ((anSk.height-goodheight)/goodheight * 100)/100;
+							console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
+							anSk.scaleX = anSk.scaleY = newscale;
+							console.log('anSk.height',anSk.height, anSk.scaleX , anSk.scaleY);
+							anSk.updateWorldTransform();
+						}
             //var speed = cc.Speed(anSk, 0.5);
             cc.eventManager.addListener({
               event: cc.EventListener.MOUSE,
               onMouseDown: function(event) {
-                cc.log('shoot');
-                console.log('shoot');
-            		anSk.setAnimation(0, "shoot", true); //ce met a faire l'action directement
-            		anSk.addAnimation(0, "walk", true, 3); //reprend la marche apres 3loops
+								if(AnimationsList)
+								{
+									var idRan = Math.round(Math.random()*(AnimationsList.length-1));
+									console.log('random id: ',idRan,' of ',AnimationsList.length,'Animations ');
+								}else{
+									console.log('clic FAIL to get Animation ID: no AnimationsList');
+								}
+
+
+								anSk.setMix(String(AnimationsList[idRan]), currentAnimation, 1);
+								anSk.setMix(currentAnimation, String(AnimationsList[idRan]), 1);
+
+            		anSk.setAnimation(0, String(AnimationsList[idRan]), true); //ce met a faire l'action directement
+								anSk.addAnimation(0, currentAnimation, true, 2); //reprend la marche apres 3loops
+            		//anSk.setAnimation(0, "shoot", true); //ce met a faire l'action directement
+            		//anSk.addAnimation(0, "walk", true, 3); //reprend la marche apres 3loops
               }
             },this);
             addControls();

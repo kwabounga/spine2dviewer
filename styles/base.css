@@ -11,7 +11,7 @@ body
 /** interface **/
 #spineviewer
 {
-  display: block;
+  /*display: block;*/
   margin: 10px;
   padding: 10px;
   /*border: 10px;
@@ -60,9 +60,19 @@ body
 {
   padding: 10px;
   background-image:  url("../icons/45px_damier.png");
+
   background-repeat: repeat;
   background-origin: padding-box;
 }
+
+#viewport-log
+{
+  font-family:"Lucida Console", serif;
+  font-size: 10px;
+  color: white;
+  background-color: black
+}
+
 #library
 {
   padding: 5px;
@@ -73,10 +83,14 @@ body
 }
 #animations-list
 {
+  font-size: 12px;
   width: 100%;
   outline-offset: 5px;
   background-color: #404040;
   text-align: left;
+  overflow-y: scroll;
+  height: 200px;
+
 
 }
 #skins
@@ -86,8 +100,23 @@ body
 #skins-list
 {
   width: 100%;
+  font-size: 12px;
   text-align: left;
   background-color: #404040;
+  overflow-y: scroll;
+  height: 200px;
+}
+@media only screen and (min-width: 990px) {
+  #animations-list
+  {
+    font-size: 14px;
+    height: 390px;
+  }
+  #skins-list
+  {
+    font-size: 14px;
+    height: 200px;
+  }
 }
 /** elements  sofl**/
 #infos
