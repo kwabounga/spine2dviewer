@@ -32,6 +32,7 @@ window.onload = function(){initviewPort();};
 function killviewport(newSkeleton)
 {
 	console.log(newSkeleton);
+	if(newSkeleton)currentSkeleton = newSkeleton;
 	s_texture = dirData + currentSkeleton + ".png";
 	s_textureJSON = dirData + currentSkeleton + ".json";
 	s_textureATLAS = dirData + currentSkeleton + ".atlas";

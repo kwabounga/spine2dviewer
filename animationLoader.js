@@ -32,9 +32,9 @@ function constructAnimationDropDownButton(skeletons)
 
   $("#loader-buttons li a").each( function(i){
     $(this).mousedown(function(){
-        currentSkeleton = allSkeletons[i];
-        logIt('want to load: ' + currentSkeleton);
-        killviewport(currentSkeleton);
+        //currentSkeleton = allSkeletons[i];
+        logIt('want to load: ' + allSkeletons[i]);
+        killviewport(allSkeletons[i]);
     });
   });
 }
