@@ -21,6 +21,7 @@ $.ajax({
   error: function(data){
     console.log('error', data);
     allSkeletons = ["boss_01", "raptor", "robot_gun_walk", "runner"];
+    constructAnimationDropDownButton(allSkeletons);
   }
 });
 
