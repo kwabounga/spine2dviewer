@@ -95,7 +95,7 @@ function setAnimationsAndSkinsActions()
       var p = anSk.parent;
       anSk.removeFromParent(false);
 
-      anSk.
+      //anSk.
       anSk.setSkin(String(SkinsList[i]));
       p.addChild(anSk);
       anSk.update(0);
