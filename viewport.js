@@ -53,8 +53,8 @@ function handleLoader()
             anSk.setPosition(size.width / 2, 0 );
             anSk.updateWorldTransform();
 
-            //anSk.setSkin("bombshell");
-            anSk.setSkin("batman");
+            anSk.setSkin("bombshell");
+            //anSk.setSkin("batman");
 
             //anSk.setMix("walk","shoot",0.5);
             //anSk.setMix("shoot","walk",0.5);
@@ -64,13 +64,13 @@ function handleLoader()
             //anSk.setMix("stand","walk",0.5);
             anSk.setAnimationListener(this, this.animationStateEvent);
 
-            anSk.setAnimation(0,"run", true);
+            //anSk.setAnimation(0,"run", true);
 
-            //anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
-            //anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
-            //anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
-            //anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
-            //anSk.addAnimation(0,"stand",true,2);
+            anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
+            anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
+            anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
+            anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
+            anSk.addAnimation(0,"stand",true,2);
 
             anSk.setTimeScale(1.5);
 
