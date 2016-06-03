@@ -27,6 +27,12 @@ function setElmtParentSize(elmt, elmtParent){
   {
     elmt.height(resultH);
     elmt.width(resultW);
+    console.log($('#Cocos2dGameContainer').height());
+    console.log($('#Cocos2dGameContainer').width());
+    $('#Cocos2dGameContainer').height(resultH);
+    $('#Cocos2dGameContainer').width(resultW);
+    console.log($('#Cocos2dGameContainer').height());
+    console.log($('#Cocos2dGameContainer').width());
     console.log('reSize ',nVw,'% new canvas height',elmt.height(), 'new canvas width',elmt.width());
 
   }else{
