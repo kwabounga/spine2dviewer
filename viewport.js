@@ -1,7 +1,7 @@
 var dirData = "animations/";
 var test ="icons/center.png";
 
-var currentSkeleton = "raptor";
+var currentSkeleton = "runner";
 //var s_texture = dirData + "boss_01.png";
 //var s_textureJSON = dirData + "boss_01.json";
 //var s_textureATLAS = dirData + "boss_01.atlas";
