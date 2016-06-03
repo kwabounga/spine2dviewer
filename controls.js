@@ -91,7 +91,13 @@ function setAnimationsAndSkinsActions()
     console.log('#skin_',i,$(this));
     $(this).mousedown(function(){
       console.log(String(SkinsList[i]));
+      //MyScene.removeChild(anSk);
+      var p = anSk.parent;
+      anSk.removeFromParent(false);
+
+      anSk.
       anSk.setSkin(String(SkinsList[i]));
+      p.addChild(anSk);
       anSk.update(0);
     })
   });
