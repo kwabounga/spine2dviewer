@@ -18,6 +18,7 @@ var g_mainmenu = [
 	{type:"TEXT", src:s_textureATLAS},
 ];
 
+var MyScene;
 var anSk;
 
 window.onload = function(){init();};
@@ -33,7 +34,7 @@ function init()
 
 function handleLoader()
 {
-    var MyScene = cc.Scene.extend({
+    MyScene = cc.Scene.extend({
         onEnter:function () {
             this._super();
             var size = cc.director.getWinSize();
@@ -41,6 +42,7 @@ function handleLoader()
             sprite.setPosition(size.width / 2, size.height / 2);
             sprite.setScale(0.8);
             //sprite.opacity = 150;
+						console.log('>>>>>>>',this);
             this.addChild(sprite, 0);
 
             //var label = cc.LabelTTF.create("Hello World", "Arial", 40);
@@ -51,7 +53,8 @@ function handleLoader()
             anSk.setPosition(size.width / 2, 0 );
             anSk.updateWorldTransform();
 
-            anSk.setSkin("gatline");
+            //anSk.setSkin("bombshell");
+            anSk.setSkin("batman");
 
             //anSk.setMix("walk","shoot",0.5);
             //anSk.setMix("shoot","walk",0.5);
@@ -61,12 +64,12 @@ function handleLoader()
             //anSk.setMix("stand","walk",0.5);
             anSk.setAnimationListener(this, this.animationStateEvent);
 
-            //anSk.setAnimation(1,"run",-1);
-            //anSk.setAnimation(2,"shoot_03",-1);
-            anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
-            anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
-            anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
-            anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
+            anSk.setAnimation(0,"run", true);
+
+            //anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
+            //anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
+            //anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
+            //anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
             //anSk.addAnimation(0,"stand",true,2);
 
             anSk.setTimeScale(1.5);
@@ -85,6 +88,7 @@ function handleLoader()
             		anSk.addAnimation(0, "walk", true, 3); //reprend la marche apres 3loops
               }
             },this);
+            addControls();
           }
     });
   cc.director.runScene(new MyScene());
