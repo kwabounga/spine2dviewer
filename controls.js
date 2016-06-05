@@ -54,7 +54,7 @@ function addControls()
 
   $('#scale-x0-5').mouseup( function(){
 
-      anSk.scale = currentScale*0.5;
+      anSk.scale = currentScaleTemp = currentScale*0.5;
       logIt('multiply scale x0.5');
     }
 
@@ -62,7 +62,7 @@ function addControls()
   )
   $('#scale-x1-0').mouseup( function(){
 
-      anSk.scale = currentScale;
+      anSk.scale  = currentScaleTemp = currentScale;
       logIt('multiply scale x1.0');
     }
 
@@ -70,7 +70,7 @@ function addControls()
   )
   $('#scale-x1-5').mouseup( function(){
 
-      anSk.scale = currentScale*1.5;
+      anSk.scale = currentScaleTemp= currentScale*1.5;
       logIt('multiply scale x0.5');
     }
 
@@ -78,7 +78,7 @@ function addControls()
   )
   $('#scale-x2-0').mouseup( function(){
 
-      anSk.scale = currentScale*2;
+      anSk.scale  = currentScaleTemp = currentScale*2;
       logIt('multiply scale x2.0');
     }
 
