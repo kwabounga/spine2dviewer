@@ -3,6 +3,7 @@ var currentSkeleton = "runner";
 var currentAnimation = 'run';
 var currentSkin = 'default';
 var currentScale = 1;
+var currentScaleTemp = 1;
 
 /** variables for loading skeletons **/
 var dirData = "animations/";
@@ -17,8 +18,12 @@ var MyScene;
 /** spine Skeleton Animation **/
 var anSk;
 
-
-
+var dragging = false;
+var currentAnSkPosX;
+var currentAnSkPosY;
+var prevMousePosX;
+var prevMousePosY;
+var isOnPc = false;
 
 window.onload = function(){initviewPort();};
 
@@ -64,6 +69,8 @@ function handleLoader()
 						anSk = new sp.SkeletonAnimation(s_textureJSON,s_textureATLAS,1);
 						//place anSk
             anSk.setPosition(size.width / 2, 0 );
+						currentAnSkPosX = anSk.x;
+						currentAnSkPosY = anSk.y;
 						//validate tranformation
             anSk.updateWorldTransform();
 
@@ -73,15 +80,8 @@ function handleLoader()
             anSk.setAnimationListener(this, this.animationStateEvent);
 						//Set the current animation
             anSk.setAnimation(0,currentAnimation, true);
-
-            //anSk.setAnimation(0,"walk",true); // lance l'animation d'origine
-            //anSk.addAnimation(0,"shoot",true, 2); // ce met a tirer au bout de 2loops
-            //anSk.addAnimation(0,"stand",true, 3); // ce met en stand by au bout de 3loops
-            //anSk.addAnimation(0,"walk",true,2); // reprend la marche apres 2loops
-            //anSk.addAnimation(0,"stand",true,2);
-
 						//Define Time Speed Animation
-            anSk.setTimeScale(1.5);
+            anSk.setTimeScale(1);
 
 						//Listening states Animation Timeline Events
             /*anSk.state.onEvent = function (trackIndex, event) {
@@ -90,36 +90,118 @@ function handleLoader()
 
 						//Add Animation Skeleton on cocos2d "MyScene"
             this.addChild(anSk);
+
 						// Set Skeleton Animation Size
 						var goodheight = 650;
-						if (anSk.height>goodheight){
-							var newscale = ((anSk.height-goodheight)/goodheight * 100)/100;
-							currentScale = newscale;
-							anSk.scaleX = anSk.scaleY = newscale;
-							anSk.updateWorldTransform();
+						var a = anSk.height;
+						var b = goodheight;
+						var newscale = 1-Math.abs(((b-a)/a * 100)/100);
+						currentScale = currentScaleTemp = newscale;
+						anSk.scaleX = anSk.scaleY = currentScale;
+						anSk.updateWorldTransform();
+						logIt('>>>>>CURRENTSCALE:'+currentScale);
+
+						// test Navigator and HardWare
+						console.log(navigator.platform);
+						console.log(navigator.userAgent);
+
+						//test if the user is on Mobile or not for set goods Listeners
+						if(isOnMobile()){ // onMobile
+							//Touch Event Listener
+							cc.eventManager.addListener({
+		            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+								swallowTouches: true,
+		            onTouchBegan : function(event){
+									console.log(navigator.platform);
+									console.log(navigator.userAgent);
+									logIt('onTouchCancelled');
+									//logIt(navigator.platform);
+									//navigator.vibrate;
+									if((String(navigator.platform).search(/win/i)) >= 0){
+										if(isOnPc)return;
+										logIt('win');
+										isOnPc = true;
+										return;
+									}else{
+										 //logIt(navigator.platform);
+										 //logIt(Navigator.userAgent);
+										 	//anSk.x = event.getLocation().x;
+											console.log($('#viewport-canvas').y);
+											//var realCanvasPosX = event.getLocation().y
+	 										anSk.y = event.getLocation().y;
+
+									}
+								},
+								onTouchMoved : function(event){
+									logIt('onTouchCancelled');
+								},
+								onTouchEnded : function(event){
+									logIt('onTouchCancelled');
+								},
+								onTouchCancelled : function(event){
+									logIt('onTouchCancelled');
+								}
+
+	        		}, this);
+						}else{ // on Computer
+							//Mouse Events Listener
+	            cc.eventManager.addListener({
+	              event: cc.EventListener.MOUSE,
+	              onMouseDown: function(event){
+									if(isOnPc)launchRandomAnimation(event);
+
+									prevMousePosX = event.getLocation().x
+									prevMousePosY = event.getLocation().y
+									//launchRandomAnimation(event);
+									dragging = true;
+									logIt('mousedown');
+									console.log(anSk);
+								},
+								onMouseUp: function(event){
+									//launchRandomAnimation(event);
+									dragging = false;
+									logIt('mouseup');
+								},
+								onMouseMove: function(event){
+								///	console.log(dragging);
+									if(dragging){
+
+										var newMousePosX = event.getLocation().x;
+										var newMousePosY = event.getLocation().y;
+										var gapX = newMousePosX - prevMousePosX;
+										var gapY = newMousePosY - prevMousePosY;
+										anSk.x += gapX;
+										anSk.y += gapY;
+										prevMousePosX = newMousePosX;
+										prevMousePosY = newMousePosY;
+										console.log(event.getLocation().x,event.getLocation().y);
+										logIt('dragging');
+
+
+										//console.log(getMousePos($('#viewport-canvas'),event));
+									}else{}
+
+								},
+								onMouseScroll: function(event)
+		        		{
+									var sY = event.getScrollY();
+		        			logIt("Scroll: " + sY);
+									if(sY>0){
+										logIt('ZOOM IN');
+										currentScaleTemp += 0.05;
+										anSk.scale = currentScaleTemp;
+
+									}else{
+										logIt('ZOOM OUT');
+										currentScaleTemp -= 0.05;
+										anSk.scale = currentScaleTemp;
+									}
+		        		}
+	            }, this);
 						}
 
-						//Mouse Events Listener
-            cc.eventManager.addListener({
-              event: cc.EventListener.MOUSE,
-              onMouseDown: function(event){
-								launchRandomAnimation(event);
-							}
-            }, this);
-						/*cc.eventManager.addListener({
-							event: cc.EventListener.TOUCH_ONE_BY_ONE,
-							onTouch: function(event) {
-								logIt('touch');
-								console.log('touch' , event);
-							}
-            },this);*/
-						//Touch Event Listener
-						cc.eventManager.addListener({
-	            event: cc.EventListener.TOUCH_ONE_BY_ONE,
-	            onTouchBegan : function(event){
-								launchRandomAnimation(event);
-							}
-        		}, this);
+
+
 						//change canvas size
 						resetCanvasSize();
 						//add controls interface
@@ -148,4 +230,24 @@ function launchRandomAnimation(event)
 
 	anSk.setAnimation(0, String(AnimationsList[idRan]), true); //ce met a faire l'action directement
 	anSk.addAnimation(0, currentAnimation, true, 2); //reprend la marche apres 3loops
+}
+
+//Mouse position in canvas
+
+/*function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+      x: evt.clientX - rect.left,
+      y: evt.clientY - rect.top
+    };
+}*/
+
+ function isOnMobile() {
+	if(/iPhone|iPod|Android|opera mini|blackberry|palm os|palm|hiptop|avantgo|plucker|xiino|blazer|elaine|iris|3g_t|windows ce|opera mobi|windows ce; smartphone;|windows ce;iemobile/i.test(navigator.userAgent)){
+		logIt('ONMOBILE');
+		return true;
+	}else{
+		logIt('ONPC');
+		return false;
+	}
 }
