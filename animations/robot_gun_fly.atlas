@@ -1,0 +1,83 @@
+
+robot_gun_fly.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+examples/enemis_robot_auto/bombshell
+  rotate: false
+  xy: 82, 2
+  size: 38, 19
+  orig: 38, 19
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/corps
+  rotate: false
+  xy: 2, 4
+  size: 78, 42
+  orig: 78, 42
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/gatline
+  rotate: false
+  xy: 297, 23
+  size: 59, 23
+  orig: 59, 23
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/phazer
+  rotate: false
+  xy: 358, 23
+  size: 49, 23
+  orig: 49, 23
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/reactor_01
+  rotate: false
+  xy: 142, 2
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/reactor_02
+  rotate: false
+  xy: 122, 2
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/reactor_back
+  rotate: true
+  xy: 236, 15
+  size: 31, 59
+  orig: 31, 59
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/reactor_front
+  rotate: true
+  xy: 171, 12
+  size: 34, 63
+  orig: 34, 63
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/sniper
+  rotate: false
+  xy: 82, 23
+  size: 87, 23
+  orig: 87, 23
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/snipershoot
+  rotate: true
+  xy: 409, 26
+  size: 20, 50
+  orig: 20, 50
+  offset: 0, 0
+  index: -1
+examples/enemis_robot_auto/snipershoot_02
+  rotate: true
+  xy: 461, 25
+  size: 21, 49
+  orig: 21, 49
+  offset: 0, 0
+  index: -1

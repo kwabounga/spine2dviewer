@@ -1,0 +1,286 @@
+
+skeleton.png
+size: 1871,1474
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+accessories_magneto
+  rotate: false
+  xy: 917, 886
+  size: 294, 588
+  orig: 294, 588
+  offset: 0, 0
+  index: -1
+body_02
+  rotate: false
+  xy: 0, 871
+  size: 322, 603
+  orig: 326, 604
+  offset: 4, 0
+  index: -1
+body_CaptAmerica
+  rotate: false
+  xy: 621, 885
+  size: 294, 589
+  orig: 315, 629
+  offset: 11, 40
+  index: -1
+body_alfred
+  rotate: false
+  xy: 324, 885
+  size: 295, 589
+  orig: 315, 598
+  offset: 9, 9
+  index: -1
+body_batman
+  rotate: true
+  xy: 1213, 1181
+  size: 293, 589
+  orig: 317, 592
+  offset: 16, 3
+  index: -1
+body_bob
+  rotate: false
+  xy: 1182, 301
+  size: 292, 583
+  orig: 295, 584
+  offset: 1, 0
+  index: -1
+body_flash
+  rotate: true
+  xy: 591, 0
+  size: 293, 588
+  orig: 335, 588
+  offset: 20, 0
+  index: -1
+body_hulk
+  rotate: true
+  xy: 1213, 886
+  size: 293, 589
+  orig: 308, 654
+  offset: 13, 54
+  index: -1
+body_magneto
+  rotate: false
+  xy: 591, 295
+  size: 294, 588
+  orig: 294, 588
+  offset: 0, 0
+  index: -1
+body_normal
+  rotate: false
+  xy: 1476, 299
+  size: 290, 585
+  orig: 290, 590
+  offset: 0, 5
+  index: -1
+body_patate
+  rotate: true
+  xy: 1182, 7
+  size: 290, 585
+  orig: 290, 590
+  offset: 0, 5
+  index: -1
+body_robin
+  rotate: false
+  xy: 887, 295
+  size: 293, 588
+  orig: 513, 772
+  offset: 114, 31
+  index: -1
+body_spiderman
+  rotate: false
+  xy: 0, 278
+  size: 294, 591
+  orig: 400, 811
+  offset: 49, 145
+  index: -1
+body_wolverine
+  rotate: false
+  xy: 296, 280
+  size: 293, 589
+  orig: 329, 731
+  offset: 19, 45
+  index: -1
+ear
+  rotate: false
+  xy: 1769, 11
+  size: 39, 91
+  orig: 39, 92
+  offset: 0, 0
+  index: -1
+ear_CaptAmerica
+  rotate: false
+  xy: 1804, 1181
+  size: 41, 91
+  orig: 41, 93
+  offset: 0, 0
+  index: -1
+ear_batman
+  rotate: false
+  xy: 1769, 104
+  size: 39, 96
+  orig: 39, 97
+  offset: 0, 0
+  index: -1
+ear_black
+  rotate: false
+  xy: 1804, 1088
+  size: 41, 91
+  orig: 41, 93
+  offset: 0, 2
+  index: -1
+ear_bob
+  rotate: false
+  xy: 1810, 109
+  size: 42, 91
+  orig: 43, 92
+  offset: 1, 0
+  index: -1
+ear_flash
+  rotate: false
+  xy: 1804, 1274
+  size: 41, 94
+  orig: 66, 137
+  offset: 1, 17
+  index: -1
+ear_magneto
+  rotate: false
+  xy: 1804, 995
+  size: 41, 91
+  orig: 41, 93
+  offset: 0, 0
+  index: -1
+ear_patate
+  rotate: false
+  xy: 1810, 16
+  size: 39, 91
+  orig: 39, 92
+  offset: 0, 0
+  index: -1
+ear_pink
+  rotate: false
+  xy: 1804, 902
+  size: 41, 91
+  orig: 41, 93
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 429, 84
+  size: 62, 63
+  orig: 64, 64
+  offset: 2, 0
+  index: -1
+eye_batman
+  rotate: true
+  xy: 1851, 47
+  size: 60, 20
+  orig: 60, 21
+  offset: 0, 1
+  index: -1
+eye_bob
+  rotate: false
+  xy: 414, 20
+  size: 62, 62
+  orig: 63, 65
+  offset: 1, 1
+  index: -1
+eye_hulk
+  rotate: false
+  xy: 348, 32
+  size: 64, 63
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+eye_robin
+  rotate: true
+  xy: 558, 218
+  size: 60, 20
+  orig: 60, 21
+  offset: 0, 1
+  index: -1
+eye_spiderman
+  rotate: false
+  xy: 348, 97
+  size: 79, 49
+  orig: 79, 50
+  offset: 0, 0
+  index: -1
+eyeball
+  rotate: false
+  xy: 234, 30
+  size: 112, 112
+  orig: 116, 116
+  offset: 1, 1
+  index: -1
+eyeball_batman
+  rotate: false
+  xy: 1768, 315
+  size: 103, 61
+  orig: 103, 62
+  offset: 0, 1
+  index: -1
+eyeball_robin
+  rotate: true
+  xy: 1804, 1370
+  size: 104, 62
+  orig: 106, 62
+  offset: 1, 0
+  index: -1
+eyeball_spiderman
+  rotate: true
+  xy: 1769, 202
+  size: 111, 99
+  orig: 112, 99
+  offset: 1, 0
+  index: -1
+eyebrow
+  rotate: true
+  xy: 530, 153
+  size: 125, 26
+  orig: 126, 27
+  offset: 1, 0
+  index: -1
+eyebrow_courbe
+  rotate: true
+  xy: 236, 157
+  size: 119, 32
+  orig: 120, 33
+  offset: 1, 0
+  index: -1
+mouth_happy
+  rotate: false
+  xy: 0, 12
+  size: 232, 130
+  orig: 235, 130
+  offset: 3, 0
+  index: -1
+mouth_happy_patate
+  rotate: false
+  xy: 296, 148
+  size: 232, 130
+  orig: 235, 130
+  offset: 3, 0
+  index: -1
+mouth_happy_red
+  rotate: false
+  xy: 0, 144
+  size: 234, 132
+  orig: 236, 132
+  offset: 1, 0
+  index: -1
+mouth_hulk
+  rotate: true
+  xy: 1768, 378
+  size: 218, 96
+  orig: 226, 97
+  offset: 6, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 1768, 598
+  size: 286, 77
+  orig: 290, 97
+  offset: 4, 7
+  index: -1
