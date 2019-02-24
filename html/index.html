@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>interface-web</title>
+  <link rel="stylesheet" href="../css/interface-web.css">
+</head>
+
+<body>
+
+  <header class="borderer carbon">
+    <div class="leftpartnav">
+      <div class="logo"></div>
+      <h1>spine<em>2d</em>viewer</h1>
+    </div>
+    <div class="rightpartnav">
+      <nav>
+        <div class="dropdown btn dropdownBtn" id="dropdownBtn">skeletons <i class="fa fa-caret-down"></i></div>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="btn">config</div>
+        <div class="btn" id="btnHelp">help</div>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="borderer blured" id="content">
+    <div id="viewport" class="normalized">
+
+      <div id="cocoviewport" class=""><canvas class="viewport-canvas" id="viewport-canvas"></canvas></div>
+
+      <div id="alerter" class="alerter good invisible">
+        <p>../and/something/good.html opened and transformed in other thing more or less not good.</p>
+      </div>
+
+      <div id="extratools">
+
+        <div class="titleVert">
+          <p>Tools</p>
+        </div>
+
+        <div class="xtraToolsContents">
+          <div class="innerTool">
+            <input type="text" name="walk-speed" value="10" size="4" id="walk-speed">
+            <input type="checkbox" name="bounding-box" id="bounding-box">
+            <input type="checkbox" name="bones" id="bones">
+          </div>
+          <div class="innerTool">
+            <input type="text" name="other" value="0.0" size="4">
+            <input type="text" name="other" value="0.0" size="4">
+          </div>
+          <div class="innerTool">
+            <input type="text" name="last" value="0.0" size="4">
+            <input type="text" name="last" value="0.0" size="4">
+          </div>
+        </div>
+      </div>
+
+      <div id="zoomer">
+        <div class="btSquared">
+          <div id="mini_bt_original"></div>
+        </div>
+        <input type="range" min="1" max="400" value="100" class="slider" id="myRange">
+      </div>
+
+
+    </div>
+
+    <div id="tools">
+      <div class="grp">
+
+        <div class="framed" title="speed">
+          <h2>speed</h2>
+
+          <div class="btngrp">
+            <div class="btSquared">
+              <div id="bt_speed05" class="centered"></div>
+            </div>
+            <div class="btSquared">
+              <div id="bt_speed10" class="centered"></div>
+            </div>
+            <div class="btSquared">
+              <div id="bt_speed20" class="centered"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="framed" title="zoom">
+          <h2>scale</h2>
+          <div class="btngrp">
+            <div class="btSquared">
+              <div id="bt_maximize" class="centered"></div>
+            </div>
+            <div class="btSquared">
+              <div id="bt_minimize" class="centered"></div>
+            </div>
+            <div class="btSquared">
+              <div id="bt_original" class="centered"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="framed" title="reset">
+          <h2>move / demo</h2>
+          <div class="btngrp">
+            <div class="btSquared">
+              <div id="bt_move" class="centered"></div>
+            </div>
+            <div class="btSquared">
+              <div id="demo" class="centered"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="grp">
+        <div class="framed" title="Animations">
+          <h2>Animations</h2>
+          <div class="list">
+            <ul>
+              <li class="anim">first animation</li>
+              <li class="anim">second animation</li>
+              <li class="anim">third animation</li>
+              <li class="anim">fourth animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+              <li class="anim">five animation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="framed" title="skins">
+          <h2>skins</h2>
+          <div class="list">
+            <ul>
+              <li class="skin">default</li>
+              <li class="skin">skins 01</li>
+              <li class="skin">skins 02</li>
+              <li class="skin">skins 03</li>
+              <li class="skin">skins 04</li>
+              <li class="skin">skins 05</li>
+              <li class="skin">skins 06</li>
+              <li class="skin">skins 07</li>
+              <li class="skin">skins 08</li>
+              <li class="skin">skins 09</li>
+              <li class="skin">skins 10</li>
+              <li class="skin">skins 11</li>
+              <li class="skin">skins 12</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="" id="logo"></section>
+  <section class="invisible" id="help">
+    <h2>HELP</h2>
+    <p>SPACE : activate / desactivate movement</p>
+    <p>ESCAPE : desactivate movement</p>
+    <p>RIGHT : skin ++</p>
+    <p>LEFT : skin --</p>
+    <p>UP : animation ++</p>
+    <p>DOWN : animation --</p>
+    <p>MOUSE WHEEL : zoom +/-</p>
+  </section>
+  <footer class="borderer carbon">
+
+    <div id="output">
+      <p></p>
+    </div>
+
+    <div id="nothing"></div>
+
+    <div id="fileInfos">
+      <div class="designedfor">
+        <span>designed for:</span>
+        <a href="https://esotericsoftware.com" target="_blank">
+          <div class="spinelogo"></div>
+        </a>
+      </div>
+      <div class="otherinfos">
+        <p class="time">00:37</p>
+        <p class="filesize">135ko</p>
+        <p class="filename">animation_name.spine</p>
+      </div>
+    </div>
+
+  </footer>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- cocods2d -->
+  <!-- <script type="text/javascript" src="../plugins/cocos2d/cocos2d-js-v3.11.js" charset="UTF-8"></script> -->
+  <script type="text/javascript" src="../plugins/spinejs/goog.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="../plugins/spinejs/spine.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="../plugins/spinejs/atlas.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="../plugins/spinejs/render-ctx2d.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="../plugins/spinejs/render-webgl.js" charset="UTF-8"></script>
+
+
+  <!-- greanSock Animation platform -->
+  <script src="../plugins/gsap/easing/EasePack.js"></script>
+  <script src="../plugins/gsap/plugins/CSSPlugin.js"></script>
+  <script src="../plugins/gsap/utils/SplitText.min.js"></script>
+  <script src="../plugins/gsap/TimelineLite.js"></script>
+  <script src="../plugins/gsap/TweenLite.js"></script>
+
+
+  <script src="../js/responsive.js"></script>
+  <script src="../js/controls.js"></script>
+  <script src="../js/viewport.js"></script>
+  <script src="../js/animationLoader.js"></script>
+  <script src="../js/dataBuilder.js"></script>
+  <script src="../js/kwatools.js"></script>
+  <script src="../js/interface-web.js"></script>
+
+</body>
+
+</html>

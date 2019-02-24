@@ -1,0 +1,7 @@
+{
+    "debugMode"     : 0,
+    "frameRate"     : 60,
+    "id"            : "viewport-canvas",
+    "renderMode"    : 1,
+    "jsList"        : []
+}
