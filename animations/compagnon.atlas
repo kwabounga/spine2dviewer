@@ -1,0 +1,195 @@
+
+compagnon.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img-compagnon/body
+  rotate: false
+  xy: 2, 544
+  size: 899, 478
+  orig: 899, 478
+  offset: 0, 0
+  index: -1
+img-compagnon/eye_iris
+  rotate: false
+  xy: 1883, 367
+  size: 39, 38
+  orig: 39, 38
+  offset: 0, 0
+  index: -1
+img-compagnon/eye_left
+  rotate: true
+  xy: 1069, 28
+  size: 65, 115
+  orig: 65, 115
+  offset: 0, 0
+  index: -1
+img-compagnon/eye_right
+  rotate: true
+  xy: 2, 2
+  size: 56, 112
+  orig: 56, 112
+  offset: 0, 0
+  index: -1
+img-compagnon/foot_left
+  rotate: false
+  xy: 1673, 89
+  size: 87, 46
+  orig: 87, 46
+  offset: 0, 0
+  index: -1
+img-compagnon/foot_right
+  rotate: false
+  xy: 730, 511
+  size: 114, 31
+  orig: 114, 31
+  offset: 0, 0
+  index: -1
+img-compagnon/glint
+  rotate: false
+  xy: 2, 113
+  size: 726, 429
+  orig: 726, 429
+  offset: 0, 0
+  index: -1
+img-compagnon/hair_cable_01
+  rotate: true
+  xy: 1201, 61
+  size: 105, 135
+  orig: 105, 135
+  offset: 0, 0
+  index: -1
+img-compagnon/hair_cable_02
+  rotate: false
+  xy: 1883, 407
+  size: 78, 203
+  orig: 78, 203
+  offset: 0, 0
+  index: -1
+img-compagnon/hair_cable_03
+  rotate: true
+  xy: 881, 95
+  size: 71, 318
+  orig: 71, 318
+  offset: 0, 0
+  index: -1
+img-compagnon/hair_cable_04
+  rotate: false
+  xy: 1883, 612
+  size: 118, 410
+  orig: 118, 410
+  offset: 0, 0
+  index: -1
+img-compagnon/hair_cable_05
+  rotate: false
+  xy: 1673, 34
+  size: 65, 53
+  orig: 65, 53
+  offset: 0, 0
+  index: -1
+img-compagnon/head
+  rotate: false
+  xy: 1355, 378
+  size: 168, 131
+  orig: 168, 131
+  offset: 0, 0
+  index: -1
+img-compagnon/left_arm_a
+  rotate: true
+  xy: 1525, 384
+  size: 125, 66
+  orig: 125, 66
+  offset: 0, 0
+  index: -1
+img-compagnon/left_arm_b
+  rotate: true
+  xy: 1338, 59
+  size: 76, 169
+  orig: 76, 169
+  offset: 0, 0
+  index: -1
+img-compagnon/legg__right_a
+  rotate: false
+  xy: 1963, 423
+  size: 74, 187
+  orig: 74, 187
+  offset: 0, 0
+  index: -1
+img-compagnon/legg__right_b
+  rotate: false
+  xy: 2003, 879
+  size: 41, 143
+  orig: 41, 143
+  offset: 0, 0
+  index: -1
+img-compagnon/legg_left_a
+  rotate: true
+  xy: 881, 5
+  size: 88, 186
+  orig: 88, 186
+  offset: 0, 0
+  index: -1
+img-compagnon/legg_left_b
+  rotate: true
+  xy: 730, 122
+  size: 44, 146
+  orig: 44, 146
+  offset: 0, 0
+  index: -1
+img-compagnon/right_arm_a
+  rotate: false
+  xy: 116, 7
+  size: 120, 51
+  orig: 120, 51
+  offset: 0, 0
+  index: -1
+img-compagnon/right_arm_b
+  rotate: true
+  xy: 1509, 35
+  size: 100, 162
+  orig: 100, 162
+  offset: 0, 0
+  index: -1
+img-compagnon/shadow
+  rotate: false
+  xy: 2, 60
+  size: 877, 51
+  orig: 877, 51
+  offset: 0, 0
+  index: -1
+img-compagnon/text_a
+  rotate: false
+  xy: 1355, 137
+  size: 520, 225
+  orig: 520, 225
+  offset: 0, 0
+  index: -1
+img-compagnon/text_b
+  rotate: false
+  xy: 730, 168
+  size: 623, 341
+  orig: 623, 341
+  offset: 0, 0
+  index: -1
+img-compagnon/text_c
+  rotate: true
+  xy: 1598, 364
+  size: 658, 283
+  orig: 658, 283
+  offset: 0, 0
+  index: -1
+img-compagnon/text_d
+  rotate: false
+  xy: 903, 739
+  size: 693, 283
+  orig: 693, 283
+  offset: 0, 0
+  index: -1
+img-compagnon/text_e
+  rotate: false
+  xy: 903, 511
+  size: 692, 226
+  orig: 692, 226
+  offset: 0, 0
+  index: -1

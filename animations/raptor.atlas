@@ -1,153 +1,153 @@
 
 raptor.png
-size: 1024,512
+size: 2048,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 examples/raptor_elements02/avbras
   rotate: false
-  xy: 451, 43
-  size: 96, 53
-  orig: 96, 53
+  xy: 1068, 93
+  size: 191, 106
+  orig: 191, 106
   offset: 0, 0
   index: -1
 examples/raptor_elements02/bras
   rotate: false
-  xy: 842, 295
-  size: 40, 104
-  orig: 40, 104
+  xy: 1962, 809
+  size: 79, 208
+  orig: 79, 208
   offset: 0, 0
   index: -1
 examples/raptor_elements02/cable
   rotate: true
-  xy: 629, 227
-  size: 16, 286
-  orig: 16, 286
+  xy: 1247, 457
+  size: 31, 572
+  orig: 31, 572
   offset: 0, 0
   index: -1
 examples/raptor_elements02/corps
   rotate: false
-  xy: 2, 252
-  size: 362, 258
-  orig: 362, 258
+  xy: 2, 502
+  size: 723, 515
+  orig: 723, 515
   offset: 0, 0
   index: -1
 examples/raptor_elements02/cou
   rotate: true
-  xy: 624, 245
-  size: 154, 216
-  orig: 154, 216
+  xy: 1241, 490
+  size: 307, 432
+  orig: 307, 432
   offset: 0, 0
   index: -1
 examples/raptor_elements02/epaule
   rotate: false
-  xy: 636, 128
-  size: 87, 71
-  orig: 87, 71
+  xy: 892, 57
+  size: 174, 142
+  orig: 174, 142
   offset: 0, 0
   index: -1
 examples/raptor_elements02/jambe
   rotate: false
-  xy: 268, 30
-  size: 181, 169
-  orig: 181, 169
+  xy: 528, 66
+  size: 362, 337
+  orig: 362, 337
   offset: 0, 0
   index: -1
 examples/raptor_elements02/lance_rocket
   rotate: true
-  xy: 201, 5
-  size: 245, 65
-  orig: 245, 65
+  xy: 397, 11
+  size: 489, 129
+  orig: 489, 129
   offset: 0, 0
   index: -1
 examples/raptor_elements02/main
-  rotate: true
-  xy: 549, 45
-  size: 51, 74
-  orig: 51, 74
+  rotate: false
+  xy: 1745, 688
+  size: 102, 147
+  orig: 102, 147
   offset: 0, 0
   index: -1
 examples/raptor_elements02/mollet
   rotate: true
-  xy: 451, 98
-  size: 101, 183
-  orig: 101, 183
+  xy: 892, 201
+  size: 202, 366
+  orig: 202, 366
   offset: 0, 0
   index: -1
 examples/raptor_elements02/pied
   rotate: false
-  xy: 866, 420
-  size: 118, 90
-  orig: 118, 90
+  xy: 1724, 837
+  size: 236, 180
+  orig: 236, 180
   offset: 0, 0
   index: -1
 examples/raptor_elements02/plume01
   rotate: true
-  xy: 2, 2
-  size: 14, 39
-  orig: 14, 39
+  xy: 528, 473
+  size: 27, 78
+  orig: 27, 78
   offset: 0, 0
   index: -1
 examples/raptor_elements02/plume02
-  rotate: true
-  xy: 636, 83
-  size: 43, 58
-  orig: 43, 58
+  rotate: false
+  xy: 1849, 719
+  size: 86, 116
+  orig: 86, 116
   offset: 0, 0
   index: -1
 examples/raptor_elements02/plume03
   rotate: true
-  xy: 986, 465
-  size: 45, 35
-  orig: 45, 35
+  xy: 1675, 490
+  size: 89, 70
+  orig: 89, 70
   offset: 0, 0
   index: -1
 examples/raptor_elements02/plume04
-  rotate: false
-  xy: 768, 191
-  size: 108, 34
-  orig: 108, 34
+  rotate: true
+  xy: 1675, 581
+  size: 216, 68
+  orig: 216, 68
   offset: 0, 0
   index: -1
 examples/raptor_elements02/plume05
   rotate: false
-  xy: 629, 201
-  size: 137, 24
-  orig: 137, 24
+  xy: 528, 16
+  size: 273, 48
+  orig: 273, 48
   offset: 0, 0
   index: -1
 examples/raptor_elements02/plume06
   rotate: false
-  xy: 268, 12
-  size: 110, 16
-  orig: 110, 16
+  xy: 2, 2
+  size: 220, 32
+  orig: 220, 32
   offset: 0, 0
   index: -1
 examples/raptor_elements02/queue_complete
   rotate: false
-  xy: 366, 401
-  size: 498, 109
-  orig: 498, 109
+  xy: 727, 799
+  size: 995, 218
+  orig: 995, 218
   offset: 0, 0
   index: -1
 examples/raptor_elements02/reine
   rotate: true
-  xy: 268, 201
-  size: 26, 359
-  orig: 26, 359
+  xy: 528, 405
+  size: 51, 717
+  orig: 51, 717
   offset: 0, 0
   index: -1
 examples/raptor_elements02/selle
   rotate: false
-  xy: 2, 18
-  size: 197, 232
-  orig: 197, 232
+  xy: 2, 36
+  size: 393, 464
+  orig: 393, 464
   offset: 0, 0
   index: -1
 examples/raptor_elements02/tete
   rotate: false
-  xy: 366, 229
-  size: 256, 170
-  orig: 256, 170
+  xy: 727, 458
+  size: 512, 339
+  orig: 512, 339
   offset: 0, 0
   index: -1
