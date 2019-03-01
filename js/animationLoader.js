@@ -5,18 +5,24 @@ $.ajax( {
   url: "./animations/index.php",
   success: function ( data ) {
     console.log( 'data loaded', data );
+    if(data.value.search('<?php')){
+      setDefaultData(data);
+      return;
+    }
     var images = jQuery.parseJSON( data.toString() );
     addSkeleton( images );
   },
   error: function ( data ) {
-    alerter( 'error' + data, 'wrong' );
+      setDefaultData(data);
+  }
+} );
+function setDefaultData(bData){
+   alerter( 'error' + bData.value, 'wrong' );
 
     // Set default skeletons
     var images = [ "boss_01", "raptor", "robot_gun_walk", "runner" ];
     addSkeleton( images )
-  }
-} );
-
+}
 function addSkeleton( images ) {
   $.each( images, function ( index, image ) {
     debug( "Found a Skeleton: " + image );
