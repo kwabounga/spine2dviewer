@@ -5,7 +5,7 @@ $.ajax( {
   url: "./animations/index.php",
   success: function ( data ) {
     console.log( 'data loaded', data );
-    if(data.value.search('<?php')){
+    if(data.toString().search('<?php')){
       setDefaultData(data);
       return;
     }
@@ -17,7 +17,7 @@ $.ajax( {
   }
 } );
 function setDefaultData(bData){
-   alerter( 'error' + bData.value, 'wrong' );
+   alerter( 'error' + bData.toString(), 'wrong' );
 
     // Set default skeletons
     var images = [ "boss_01", "raptor", "robot_gun_walk", "runner" ];
