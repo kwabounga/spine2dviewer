@@ -4,7 +4,7 @@ var allSkeletons = [];
 $.ajax( {
   url: "./animations/index.php",
   success: function ( data ) {
-    log( 'data loaded', data );
+    console.log( 'data loaded', data );
     var images = jQuery.parseJSON( data.toString() );
     addSkeleton( images );
   },
