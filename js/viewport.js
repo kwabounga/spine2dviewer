@@ -11,7 +11,7 @@ var currentScale = 1;
 var currentScaleTemp = 1;
 
 /** variables for loading skeletons **/
-var dirData = "/animations/";
+var dirData = "/spine2dviewer/animations/";
 var s_texture = dirData + currentSkeleton + ".png";
 var s_textureJSON = dirData + currentSkeleton + ".json";
 var s_textureATLAS = dirData + currentSkeleton + ".atlas";
@@ -279,7 +279,7 @@ var loadFile = function ( file, callback ) {
 
 var add_file = function ( name ) {
   var file = {};
-  file.path = '/animations/';
+  file.path = '/spine2dviewer/animations/';
   file.json_url = name + '.json';
   file.atlas_url = name + '.atlas' || "";
   allSkeletons.push( name );
